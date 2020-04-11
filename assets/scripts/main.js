@@ -103,3 +103,47 @@ function add(a,b){
 //     console.log(a,b)
     return a+b;
 }
+
+// 4.
+var johnbills = [124,48,268];
+var tiparray =[];
+var finalamtarray =[];
+var tip=0;
+johnbills.forEach(billfunc);
+
+function billfunc(price,index){
+     tipcalculator(price);
+     console.log("the price is:"+price+"and the index is:"+index);
+}
+
+function tipcalculator(amount){
+    if(amount<50){
+        console.log("twenty percent bill");
+        tip = amount*0.2;
+        tiparray.push(Math.floor(tip));
+        console.log(tip);
+
+    }else if(amount>50 && amount<200){
+
+        console.log("fifteen percent of thee bill");
+        tip = amount*0.15;
+        tiparray.push(Math.floor(tip));
+        console.log(tip);
+
+    }else if (amount>200){
+
+        console.log("it's    ten percent ");
+        tip = amount*0.10;
+        tiparray.push(Math.floor(tip));
+        console.log(tip);
+    }
+}
+
+console.log(tiparray);
+johnbills.forEach(totalamt);
+function totalamt(price,index){
+
+     finalamtarray.push(tiparray[index]+price);
+
+}
+console.log(finalamtarray);
