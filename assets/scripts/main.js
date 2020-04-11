@@ -147,3 +147,36 @@ function totalamt(price,index){
 
 }
 console.log(finalamtarray);
+
+
+// 5.
+var mark ={
+
+    name: "Mark mathew",
+    mass: "45",    
+    height: "1.45",
+    bmical: function(){
+                            this.bmi=Math.floor(this.mass/(this.height*this.height));
+            }
+
+}
+var john ={
+
+    name: "john cena",
+    mass: "58",    
+    height: "1.76",
+    bmical: function(){
+                this.bmi=Math.floor(this.mass/(this.height*this.height))
+            }
+
+}
+mark.bmical();
+john.bmical();
+if (john.bmi>mark.bmi){
+    console.log(john.name + " bmi is:"+john.bmi);
+}else if (john.bmi === mark.bmi){
+//     console.log(john.bmi,mark.bmi);
+    console.log("YOur bmis are equal");
+}else{console.log(mark.name +" bmi is:"+mark.bmi);}
+
+console.log(mark,john);
