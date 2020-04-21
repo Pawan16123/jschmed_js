@@ -14,16 +14,69 @@ initialScore = [0, 0];
 finalScore = [0, 0];
 currentScore = [0, 0];
 
-var newGame, rollDice, hold;
+var newGame, rollDice, hold, save=0;
 // Buttons
 newGame = document.getElementsByClassName("new-game");
 rollDice = document.getElementsByClassName("dice");
 hold = document.getElementsByClassName("hold");
 
 newGame[0].addEventListener("click",reset);
+rollDice[0].addEventListener("click",rolling);
+hold[0].addEventListener("click",holdme);
+
+
+function rolling(){
+    var diceface = Math.floor((Math.random()*6)+1);
+    save += diceface;
+    pcOne[0].textContent = save;
+    console.log(diceface);
+    // one =0;
+    // console.log('this is one ' + one);
+    return diceface;
+}
+
+// var one =0;
+// console.log('this is outside ' + one);
+
+
+console.log("vahar se "+save);
+function holdme(){
+    finalScore[0] += save;
+    playeroneScore[0].textContent = finalScore[0];
+    console.log(finalScore);
+    console.log("ansder se "+ save);
+    save = 0;
+    pcOne[0].textContent = save;
+    console.log('this is if ' + one);
+    // if(one){
+    //     finalScore[0] += save;
+    //     playeroneScore[0].textContent = finalScore[0];
+    //     console.log(finalScore);
+    //     console.log("ansder se "+ save);
+    //     save = 0;
+    //     pcOne[0].textContent = save;
+    //     console.log('this is if ' + one);
+        
+    // }else{
+    //     console.log('this is else ' + one);
+        
+    //     finalScore[1] += save;
+    //     playertwoScore[0].textContent = finalScore[1];
+    //     console.log(finalScore);
+    //     console.log("ansder se "+ save);
+    //     save = 0;
+    //     pcTwo[0].textContent = save;
+    //     one = 1;
+        
+    // }
+
+}
+
 function reset(){
     playeroneScore[0].textContent = initialScore[0];
     playertwoScore[0].textContent = initialScore[1];
     pcOne[0].textContent = currentScore[0];
     pcTwo[0].textContent = currentScore[1];
+    finalScore = [0, 0];
+    save=0;
 }
