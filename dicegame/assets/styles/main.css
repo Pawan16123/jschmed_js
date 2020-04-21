@@ -83,3 +83,15 @@ html,body{
     left: 25%;
     border-radius: 50% 50% 0 0;
 }
+.dice,
+.hold,
+.new-game{
+    transition: all 0.2s;
+}
+
+.dice:hover,
+.hold:hover,
+.new-game:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
