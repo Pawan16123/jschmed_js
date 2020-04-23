@@ -48,27 +48,27 @@ function holdme(){
     save = 0;
     pcOne[0].textContent = save;
     console.log('this is if ' + one);
-    if(one){
-        finalScore[0] += save;
-        playeroneScore[0].textContent = finalScore[0];
-        console.log(finalScore);
-        console.log("ansder se "+ save);
-        save = 0;
-        pcOne[0].textContent = save;
-        console.log('this is if ' + one);
+    // if(one){
+    //     finalScore[0] += save;
+    //     playeroneScore[0].textContent = finalScore[0];
+    //     console.log(finalScore);
+    //     console.log("ansder se "+ save);
+    //     save = 0;
+    //     pcOne[0].textContent = save;
+    //     console.log('this is if ' + one);
         
-    }else{
-        console.log('this is else ' + one);
+    // }else{
+    //     console.log('this is else ' + one);
         
-        finalScore[1] += save;
-        playertwoScore[0].textContent = finalScore[1];
-        console.log(finalScore);
-        console.log("ansder se "+ save);
-        save = 0;
-        pcTwo[0].textContent = save;
-        one = 1;
+    //     finalScore[1] += save;
+    //     playertwoScore[0].textContent = finalScore[1];
+    //     console.log(finalScore);
+    //     console.log("ansder se "+ save);
+    //     save = 0;
+    //     pcTwo[0].textContent = save;
+    //     one = 1;
         
-    }
+    // }
 
 }
 
