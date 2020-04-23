@@ -8,6 +8,14 @@ pcTwo = document.getElementsByClassName("pctwo");
 
 console.log(playeroneScore,playertwoScore,pcOne,pcTwo);
 
+// Highlight
+var hlOne, hlTwo;
+hlOne = document.getElementById("amone");
+hlTwo = document.getElementById("amtwo");
+
+var diceno = document.getElementsByClassName("justnumber");
+
+
 var initialScore, finalScore, currentScore;
 // SCORE arrays
 initialScore = [0, 0];
@@ -29,11 +37,15 @@ var currentSwitch = 1;
 
 function rolling(){
     var diceface = Math.floor((Math.random()*6)+1);
+    diceno[0].textContent = diceface;
     if(diceface === 1){
         save = 0;
+        diceno[0].style.backgroundColor = "tomato";
         holdme();
+        
     }else{
         save += diceface;
+        diceno[0].style.backgroundColor = "white";
     }
     cswitch();
     console.log(diceface);
@@ -43,12 +55,20 @@ function rolling(){
 
 function cswitch(){
     if(currentSwitch){
+        // hlTwo.style.transform ="scale(1)";
+        // hlOne.style.transform ="scale(1.05)";
         pcOne[0].textContent = save;
     }else{
+        // hlOne.style.transform ="scale(1)";
+        // hlTwo.style.transform = "scale(1.05)";
         pcTwo[0].textContent =save;
     }
 }
 
+
+// function borderswitch(){
+
+// }
 // var one =0;
 // console.log('this is outside ' + one);
 
@@ -96,4 +116,5 @@ function reset(){
     pcTwo[0].textContent = currentScore[1];
     finalScore = [0, 0];
     save=0;
+    diceno[0].textContent = 0;
 }
