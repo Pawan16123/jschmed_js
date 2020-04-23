@@ -24,12 +24,18 @@ newGame[0].addEventListener("click",reset);
 rollDice[0].addEventListener("click",rolling);
 hold[0].addEventListener("click",holdme);
 
-var one=1;
+var one = 1; 
+var currentSwitch = 1;
 
 function rolling(){
     var diceface = Math.floor((Math.random()*6)+1);
     save += diceface;
-    pcOne[0].textContent = save;
+
+    if(currentSwitch){
+        pcOne[0].textContent = save;
+    }else{
+        pcTwo[0].textContent =save;
+    }
     console.log(diceface);
     // console.log('this is one ' + one);
     return diceface;
@@ -57,6 +63,7 @@ function holdme(){
         pcOne[0].textContent = save;
         console.log('this is if ' + one);
         one = 0;
+        currentSwitch = 0;
         
     }else{
         console.log('this is else ' + one);
@@ -68,6 +75,7 @@ function holdme(){
         save = 0;
         pcTwo[0].textContent = save;
         one = 1;
+        currentSwitch = 1;
         
     }
 
