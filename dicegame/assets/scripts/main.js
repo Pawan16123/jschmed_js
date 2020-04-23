@@ -24,13 +24,13 @@ newGame[0].addEventListener("click",reset);
 rollDice[0].addEventListener("click",rolling);
 hold[0].addEventListener("click",holdme);
 
+var one=1;
 
 function rolling(){
     var diceface = Math.floor((Math.random()*6)+1);
     save += diceface;
     pcOne[0].textContent = save;
     console.log(diceface);
-    // one =0;
     // console.log('this is one ' + one);
     return diceface;
 }
@@ -41,34 +41,35 @@ function rolling(){
 
 console.log("vahar se "+save);
 function holdme(){
-    finalScore[0] += save;
-    playeroneScore[0].textContent = finalScore[0];
-    console.log(finalScore);
-    console.log("ansder se "+ save);
-    save = 0;
-    pcOne[0].textContent = save;
-    console.log('this is if ' + one);
-    // if(one){
-    //     finalScore[0] += save;
-    //     playeroneScore[0].textContent = finalScore[0];
-    //     console.log(finalScore);
-    //     console.log("ansder se "+ save);
-    //     save = 0;
-    //     pcOne[0].textContent = save;
-    //     console.log('this is if ' + one);
+    // finalScore[0] += save;
+    // playeroneScore[0].textContent = finalScore[0];
+    // console.log(finalScore);
+    // console.log("ansder se "+ save);
+    // save = 0;
+    // pcOne[0].textContent = save;
+    // console.log('this is if ' + one);
+    if(one){
+        finalScore[0] += save;
+        playeroneScore[0].textContent = finalScore[0];
+        console.log(finalScore);
+        console.log("ansder se "+ save);
+        save = 0;
+        pcOne[0].textContent = save;
+        console.log('this is if ' + one);
+        one = 0;
         
-    // }else{
-    //     console.log('this is else ' + one);
+    }else{
+        console.log('this is else ' + one);
         
-    //     finalScore[1] += save;
-    //     playertwoScore[0].textContent = finalScore[1];
-    //     console.log(finalScore);
-    //     console.log("ansder se "+ save);
-    //     save = 0;
-    //     pcTwo[0].textContent = save;
-    //     one = 1;
+        finalScore[1] += save;
+        playertwoScore[0].textContent = finalScore[1];
+        console.log(finalScore);
+        console.log("ansder se "+ save);
+        save = 0;
+        pcTwo[0].textContent = save;
+        one = 1;
         
-    // }
+    }
 
 }
 
