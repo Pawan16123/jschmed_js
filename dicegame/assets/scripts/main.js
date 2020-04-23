@@ -29,16 +29,24 @@ var currentSwitch = 1;
 
 function rolling(){
     var diceface = Math.floor((Math.random()*6)+1);
-    save += diceface;
+    if(diceface === 1){
+        save = 0;
+        holdme();
+    }else{
+        save += diceface;
+    }
+    cswitch();
+    console.log(diceface);
+    // console.log('this is one ' + one);
+    return diceface;
+}
 
+function cswitch(){
     if(currentSwitch){
         pcOne[0].textContent = save;
     }else{
         pcTwo[0].textContent =save;
     }
-    console.log(diceface);
-    // console.log('this is one ' + one);
-    return diceface;
 }
 
 // var one =0;
