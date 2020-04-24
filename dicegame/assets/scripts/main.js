@@ -107,6 +107,29 @@ function holdme(){
         
     }
 
+    winner();
+
+}
+
+
+
+var winnie = document.getElementsByClassName("win");
+var winid = document.getElementsByClassName("winNum");
+
+function winner(){
+    if (finalScore[0]>=50){
+        console.log("Player one is the winner");
+        winnie[0].style.display = "block";
+        winid[0].textContent = "1";
+        
+        
+    }else if(finalScore[1]>=50){
+        console.log("Player TWO is the winner");
+        winnie[0].style.display = "block";
+        winid[0].textContent = "2";
+    }else{
+        console.log("Roll the dice");
+    }
 }
 
 function reset(){
@@ -117,4 +140,6 @@ function reset(){
     finalScore = [0, 0];
     save=0;
     diceno[0].textContent = 0;
+    winnie[0].style.display = "none";
+
 }

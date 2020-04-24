@@ -105,6 +105,15 @@ html,body{
     padding-top: 1.2%;
     border-radius: 15px;
     position: absolute;
-    top: 265px;
+    top: 240px;
     left: 47%;
+}
+
+.win{
+    position: fixed;
+    left: 50%;
+    transform: translate(-48%,40px);
+    color: white;
+    display: none;
+
 }
