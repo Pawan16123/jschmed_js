@@ -120,9 +120,16 @@ html,body{
 
 
 @media (max-width:1080px){
+    .win {
+        position: absolute;
+        left: 20px;
+        transform: none;
+        color: white;
+        /* display: none; */
+    }
 
     .container-fluid {
-        padding: 5px 25px;
+        padding: 50px 25px 10px;
 
     }
     .screen-one{
@@ -153,8 +160,8 @@ html,body{
         top: 280px;
     }
     .hold{
-        left: 45px;
-        bottom: 310px;
+        left: 25px;
+        bottom: 325px;
     }
     .dice{
         left: 15px;
