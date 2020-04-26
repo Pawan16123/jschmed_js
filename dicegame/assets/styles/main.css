@@ -117,3 +117,23 @@ html,body{
     display: none;
 
 }
+
+
+@media(maxwidth:1080px){
+
+    .screen-one{
+        height: calc(100vh - 200px);
+        background: #c0392b;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to top, #8e44ad, #c0392b);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to top, #8e44ad, #c0392b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        text-align: center;
+        color: white;
+        border-radius: 5%;
+        border-right: none;
+    }
+    .screen-two{
+        border-radius: 5%;
+    }
+
+
+}
