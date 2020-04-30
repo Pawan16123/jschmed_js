@@ -149,6 +149,7 @@ html,body{
         width: fit-content;
         padding: 5px;
         position: relative;
+        margin: 0px 1%;
     }
 
     .face .justnumber{
