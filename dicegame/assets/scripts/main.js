@@ -36,7 +36,7 @@ var one = 1;
 var currentSwitch = 1;
 
 function rolling(){
-    // var diceimg = document.getElementsByClassName("image");
+    var diceimg = document.getElementsByClassName("image");
     
 
     var diceface = Math.floor((Math.random()*6)+1);
@@ -54,7 +54,7 @@ function rolling(){
     console.log(diceface);
 
 
-    // diceimg[0].src = "./assets/images/dice-"+ diceface +".png";
+    diceimg[0].src = "./assets/images/dice-"+ diceface +".png";
     // console.log(diceimg);
     // console.log('this is one ' + one);
     return diceface;
