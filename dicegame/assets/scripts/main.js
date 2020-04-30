@@ -44,11 +44,13 @@ function rolling(){
     if(diceface === 1){
         save = 0;
         diceno[0].style.backgroundColor = "tomato";
+        diceimg[0].style.border = "2px solid red";
         holdme();
         
     }else{
         save += diceface;
         diceno[0].style.backgroundColor = "white";
+        diceimg[0].style.border = "none";
     }
     cswitch();
     console.log(diceface);
