@@ -29,8 +29,15 @@ rollDice = document.getElementsByClassName("dice");
 hold = document.getElementsByClassName("hold");
 
 newGame[0].addEventListener("click",reset);
+newGame[0].addEventListener('keydown', reset);
+
+
 rollDice[0].addEventListener("click",rolling);
+rollDice[0].addEventListener('keydown', rolling);
+
+
 hold[0].addEventListener("click",holdme);
+hold[0].addEventListener('keydown', holdme);
 
 var one = 1; 
 var currentSwitch = 1;
