@@ -151,6 +151,13 @@ html,body{
         position: relative;
         margin: 0px 1%;
     }
+    .dice:focus,
+    .hold:focus,
+    .new-game:focus,
+    .face .justnumber:focus{
+        outline: none;
+        text-decoration: underline grey;
+    }
 
     .face .justnumber{
         width: 40px;
