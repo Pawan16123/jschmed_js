@@ -6,7 +6,7 @@ pcOne = document.getElementsByClassName("pcone");
 pcTwo = document.getElementsByClassName("pctwo");
 
 
-console.log(playeroneScore,playertwoScore,pcOne,pcTwo);
+// console.log(playeroneScore,playertwoScore,pcOne,pcTwo);
 
 // Highlight
 var hlOne, hlTwo;
@@ -66,7 +66,7 @@ function rolling(){
         diceimg[0].style.border = "none";
     }
     cswitch();
-    console.log(diceface);
+    // console.log(diceface);
 
 
     diceimg[0].src = "./assets/images/dice-"+ diceface +".png";
@@ -87,7 +87,7 @@ function cswitch(){
 
 
 
-console.log("vahar se "+save);
+// console.log("vahar se "+save);
 function holdme(){
     // finalScore[0] += save;
     // playeroneScore[0].textContent = finalScore[0];
@@ -99,23 +99,23 @@ function holdme(){
     if(one){
         finalScore[0] += save;
         playeroneScore[0].textContent = finalScore[0];
-        console.log(finalScore);
-        console.log("ansder se "+ save);
+        // console.log(finalScore);
+        // console.log("ansder se "+ save);
         save = 0;
         pcOne[0].textContent = save;
-        console.log('this is if ' + one);
+        // console.log('this is if ' + one);
         one = 0;
         currentSwitch = 0;
         scorea.classList.toggle("scoreactive");
         scoreb.classList.toggle("scoreactive");
         
     }else{
-        console.log('this is else ' + one);
+        // console.log('this is else ' + one);
         
         finalScore[1] += save;
         playertwoScore[0].textContent = finalScore[1];
-        console.log(finalScore);
-        console.log("ansder se "+ save);
+        // console.log(finalScore);
+        // console.log("ansder se "+ save);
         save = 0;
         pcTwo[0].textContent = save;
         one = 1;
@@ -136,17 +136,17 @@ var winid = document.getElementsByClassName("winNum");
 
 function winner(){
     if (finalScore[0]>=50){
-        console.log("Player one is the winner");
+        // console.log("Player one is the winner");
         winnie[0].style.display = "block";
         winid[0].textContent = "1";
         
         
     }else if(finalScore[1]>=50){
-        console.log("Player TWO is the winner");
+        // console.log("Player TWO is the winner");
         winnie[0].style.display = "block";
         winid[0].textContent = "2";
     }else{
-        console.log("Roll the dice");
+        // console.log("Roll the dice");
     }
 }
 
