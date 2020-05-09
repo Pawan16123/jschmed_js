@@ -8,6 +8,12 @@ pcTwo = document.getElementsByClassName("pctwo");
 
 // console.log(playeroneScore,playertwoScore,pcOne,pcTwo);
 
+// Audio file
+x = document.getElementById("myAudio"); 
+
+
+
+
 // Highlight
 var hlOne, hlTwo;
 hlOne = document.getElementById("amone");
@@ -50,7 +56,7 @@ scorea.classList.toggle("scoreactive");
 
 function rolling(){
     var diceimg = document.getElementsByClassName("image");
-    
+    x.play();
 
     var diceface = Math.floor((Math.random()*6)+1);
     diceno[0].textContent = diceface;
@@ -159,6 +165,7 @@ function reset(){
     save=0;
     diceno[0].textContent = 0;
     winnie[0].style.display = "none";
+    x.pause();
     // scorea.classList.remove("scoreactive");
     // scoreb.classList.toggle("scoreactive");
 
