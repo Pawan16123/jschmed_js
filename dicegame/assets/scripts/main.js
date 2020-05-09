@@ -16,14 +16,14 @@ hlTwo = document.getElementById("amtwo");
 var diceno = document.getElementsByClassName("justnumber");
 
 
-var initialScore, finalScore, currentScore;
 // SCORE arrays
+var initialScore, finalScore, currentScore;
 initialScore = [0, 0];
 finalScore = [0, 0];
 currentScore = [0, 0];
 
-var newGame, rollDice, hold, save=0;
 // Buttons
+var newGame, rollDice, hold, save=0;
 newGame = document.getElementsByClassName("new-game");
 rollDice = document.getElementsByClassName("dice");
 hold = document.getElementsByClassName("hold");
@@ -39,8 +39,14 @@ rollDice[0].addEventListener('keydown', rolling);
 hold[0].addEventListener("click",holdme);
 hold[0].addEventListener('keydown', holdme);
 
+// score background
+var scorea, scoreb;
+scorea = document.querySelector(".scorea");
+scoreb = document.querySelector(".scoreb");
+
 var one = 1; 
 var currentSwitch = 1;
+scorea.classList.toggle("scoreactive");
 
 function rolling(){
     var diceimg = document.getElementsByClassName("image");
@@ -71,8 +77,6 @@ function rolling(){
 
 function cswitch(){
     if(currentSwitch){
-        // hlTwo.style.transform ="scale(1)";
-        // hlOne.style.transform ="scale(1.05)";
         pcOne[0].textContent = save;
     }else{
         // hlOne.style.transform ="scale(1)";
@@ -81,12 +85,6 @@ function cswitch(){
     }
 }
 
-
-// function borderswitch(){
-
-// }
-// var one =0;
-// console.log('this is outside ' + one);
 
 
 console.log("vahar se "+save);
@@ -108,6 +106,8 @@ function holdme(){
         console.log('this is if ' + one);
         one = 0;
         currentSwitch = 0;
+        scorea.classList.toggle("scoreactive");
+        scoreb.classList.toggle("scoreactive");
         
     }else{
         console.log('this is else ' + one);
@@ -120,6 +120,8 @@ function holdme(){
         pcTwo[0].textContent = save;
         one = 1;
         currentSwitch = 1;
+        scoreb.classList.toggle("scoreactive");
+        scorea.classList.toggle("scoreactive");
         
     }
 
@@ -157,5 +159,7 @@ function reset(){
     save=0;
     diceno[0].textContent = 0;
     winnie[0].style.display = "none";
+    // scorea.classList.remove("scoreactive");
+    // scoreb.classList.toggle("scoreactive");
 
 }

@@ -75,7 +75,8 @@ html,body{
     font-weight: bolder;
 }
 
-.score{
+.scorea,
+.scoreb{
     background: linear-gradient(to top, #ff4433, #c04848); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     width: 50%;
     position: absolute;
@@ -83,6 +84,11 @@ html,body{
     left: 25%;
     border-radius: 50% 50% 0 0;
 }
+
+.scoreactive{
+    background: linear-gradient(to top, #c633ff, #17118b);
+}
+
 .dice,
 .hold,
 .new-game{
