@@ -9,7 +9,8 @@ pcTwo = document.getElementsByClassName("pctwo");
 // console.log(playeroneScore,playertwoScore,pcOne,pcTwo);
 
 // Audio file
-x = document.getElementById("myAudio"); 
+var x = document.getElementById("myAudio"); 
+var y = document.getElementById("myaud"); 
 
 
 
@@ -61,6 +62,7 @@ function rolling(){
     var diceface = Math.floor((Math.random()*6)+1);
     diceno[0].textContent = diceface;
     if(diceface === 1){
+        y.play();
         save = 0;
         diceno[0].style.backgroundColor = "tomato";
         diceimg[0].style.border = "2px solid red";
