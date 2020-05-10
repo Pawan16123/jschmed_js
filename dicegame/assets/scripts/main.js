@@ -24,7 +24,7 @@ var diceno = document.getElementsByClassName("justnumber");
 
 
 // SCORE arrays
-var initialScore, finalScore, currentScore;
+var initialScore, finalScore, currentScore, gameon = true;
 initialScore = [0, 0];
 finalScore = [0, 0];
 currentScore = [0, 0];
@@ -56,31 +56,34 @@ var currentSwitch = 1;
 scorea.classList.toggle("scoreactive");
 
 function rolling(){
-    var diceimg = document.getElementsByClassName("image");
-    x.play();
+    if(gameon){
+        var diceimg = document.getElementsByClassName("image");
+        x.play();
+    
+        var diceface = Math.floor((Math.random()*6)+1);
+        diceno[0].textContent = diceface;
+        if(diceface === 1){
+            y.play();
+            save = 0;
+            diceno[0].style.backgroundColor = "tomato";
+            diceimg[0].style.border = "2px solid red";
+            holdme();
+            
+        }else{
+            save += diceface;
+            diceno[0].style.backgroundColor = "white";
+            diceimg[0].style.border = "none";
+        }
+        cswitch();
+        // console.log(diceface);
+    
+    
+        diceimg[0].src = "./assets/images/dice-"+ diceface +".png";
 
-    var diceface = Math.floor((Math.random()*6)+1);
-    diceno[0].textContent = diceface;
-    if(diceface === 1){
-        y.play();
-        save = 0;
-        diceno[0].style.backgroundColor = "tomato";
-        diceimg[0].style.border = "2px solid red";
-        holdme();
-        
-    }else{
-        save += diceface;
-        diceno[0].style.backgroundColor = "white";
-        diceimg[0].style.border = "none";
     }
-    cswitch();
-    // console.log(diceface);
-
-
-    diceimg[0].src = "./assets/images/dice-"+ diceface +".png";
     // console.log(diceimg);
     // console.log('this is one ' + one);
-    return diceface;
+    // return diceface;
 }
 
 function cswitch(){
@@ -147,12 +150,14 @@ function winner(){
         // console.log("Player one is the winner");
         winnie[0].style.display = "block";
         winid[0].textContent = "1";
+        gameon = false;
         
         
     }else if(finalScore[1]>=50){
         // console.log("Player TWO is the winner");
         winnie[0].style.display = "block";
         winid[0].textContent = "2";
+        gameon = false;
     }else{
         // console.log("Roll the dice");
     }
@@ -168,6 +173,7 @@ function reset(){
     diceno[0].textContent = 0;
     winnie[0].style.display = "none";
     x.pause();
+    gameon = true;
     // scorea.classList.remove("scoreactive");
     // scoreb.classList.toggle("scoreactive");
 
