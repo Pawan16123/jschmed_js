@@ -47,9 +47,18 @@ rollDice[0].addEventListener('keydown', rolling);
 hold[0].addEventListener("click",holdme);
 hold[0].addEventListener('keydown', holdme);
 
+var eve = 1;
+
 snd[0].addEventListener("click",function(){ 
-    sound = false;
+   if( eve== 1){
+    sound =false; 
+    eve =0; 
     console.log("sound turned off");
+}else{
+    sound =true; 
+    eve =1;
+    console.log("sound turned on");
+   }
 });
 
 // score background
@@ -183,7 +192,8 @@ function reset(){
     diceno[0].textContent = 0;
     winnie[0].style.display = "none";
     x.pause();
-    gameon = true;
+    sound = true;
+    // console.log(gameon);
     // scorea.classList.remove("scoreactive");
     // scoreb.classList.toggle("scoreactive");
 
