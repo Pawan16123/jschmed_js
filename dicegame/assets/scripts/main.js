@@ -30,10 +30,11 @@ finalScore = [0, 0];
 currentScore = [0, 0];
 
 // Buttons
-var newGame, rollDice, hold, save=0;
+var newGame, rollDice, hold, save=0, sound=true;
 newGame = document.getElementsByClassName("new-game");
 rollDice = document.getElementsByClassName("dice");
 hold = document.getElementsByClassName("hold");
+snd = document.getElementsByClassName("image");
 
 newGame[0].addEventListener("click",reset);
 newGame[0].addEventListener('keydown', reset);
@@ -45,6 +46,11 @@ rollDice[0].addEventListener('keydown', rolling);
 
 hold[0].addEventListener("click",holdme);
 hold[0].addEventListener('keydown', holdme);
+
+snd[0].addEventListener("click",function(){ 
+    sound = false;
+    console.log("sound turned off");
+});
 
 // score background
 var scorea, scoreb;
@@ -58,12 +64,16 @@ scorea.classList.toggle("scoreactive");
 function rolling(){
     if(gameon){
         var diceimg = document.getElementsByClassName("image");
-        x.play();
+        if(sound){
+            x.play();
+        }
     
         var diceface = Math.floor((Math.random()*6)+1);
         diceno[0].textContent = diceface;
         if(diceface === 1){
-            y.play();
+            if(sound){
+                y.play();
+            }
             save = 0;
             diceno[0].style.backgroundColor = "tomato";
             diceimg[0].style.border = "2px solid red";
