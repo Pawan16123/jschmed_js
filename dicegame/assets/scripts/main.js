@@ -191,7 +191,7 @@ function reset(){
     save=0;
     diceno[0].textContent = 0;
     winnie[0].style.display = "none";
-    x.pause();
+    // x.pause();
     sound = true;
     // console.log(gameon);
     // scorea.classList.remove("scoreactive");
