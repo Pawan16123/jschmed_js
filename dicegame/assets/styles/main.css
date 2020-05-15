@@ -77,7 +77,7 @@ html,body{
 
 .scorea,
 .scoreb{
-    background: linear-gradient(to top, #ff4433, #c04848); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to top, #ff4433, #c04848); 
     width: 50%;
     position: absolute;
     bottom: 0;
