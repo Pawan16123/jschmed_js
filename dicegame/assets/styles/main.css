@@ -88,7 +88,9 @@ html,body{
 .scoreactive{
     background: linear-gradient(to top, #c633ff, #17118b);
 }
-
+.playeract{
+    color: #79c4e7;
+}
 .dice,
 .hold,
 .new-game{

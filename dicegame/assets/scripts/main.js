@@ -69,6 +69,7 @@ scoreb = document.querySelector(".scoreb");
 var one = 1; 
 var currentSwitch = 1;
 scorea.classList.toggle("scoreactive");
+playeroneScore[0].classList.toggle("playeract");
 
 function rolling(){
     if(gameon){
@@ -138,6 +139,8 @@ function holdme(){
         currentSwitch = 0;
         scorea.classList.toggle("scoreactive");
         scoreb.classList.toggle("scoreactive");
+        playeroneScore[0].classList.toggle("playeract");
+        playertwoScore[0].classList.toggle("playeract");
         
     }else{
         // console.log('this is else ' + one);
@@ -152,7 +155,8 @@ function holdme(){
         currentSwitch = 1;
         scoreb.classList.toggle("scoreactive");
         scorea.classList.toggle("scoreactive");
-        
+        playeroneScore[0].classList.toggle("playeract");
+        playertwoScore[0].classList.toggle("playeract");
     }
 
     winner();
