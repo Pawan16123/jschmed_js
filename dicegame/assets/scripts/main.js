@@ -1,9 +1,12 @@
-var playeroneScore, playertwoScore, pcOne, pcTwo;
+var playeroneScore, playertwoScore, pcOne, pcTwo, high1, high2;
 
 playeroneScore = document.getElementsByClassName("pone");
 playertwoScore = document.getElementsByClassName("ptwo");
 pcOne = document.getElementsByClassName("pcone");
 pcTwo = document.getElementsByClassName("pctwo");
+
+high1 = document.getElementsByClassName("just1");
+high2 = document.getElementsByClassName("just2");
 
 
 // console.log(playeroneScore,playertwoScore,pcOne,pcTwo);
@@ -70,6 +73,7 @@ var one = 1;
 var currentSwitch = 1;
 scorea.classList.toggle("scoreactive");
 playeroneScore[0].classList.toggle("playeract");
+high1[0].classList.toggle("playeract");
 
 function rolling(){
     if(gameon){
@@ -141,6 +145,12 @@ function holdme(){
         scoreb.classList.toggle("scoreactive");
         playeroneScore[0].classList.toggle("playeract");
         playertwoScore[0].classList.toggle("playeract");
+
+
+        high1[0].classList.toggle("playeract");
+        high2[0].classList.toggle("playeract");
+
+
         
     }else{
         // console.log('this is else ' + one);
@@ -157,6 +167,9 @@ function holdme(){
         scorea.classList.toggle("scoreactive");
         playeroneScore[0].classList.toggle("playeract");
         playertwoScore[0].classList.toggle("playeract");
+
+        high1[0].classList.toggle("playeract");
+        high2[0].classList.toggle("playeract");
     }
 
     winner();
