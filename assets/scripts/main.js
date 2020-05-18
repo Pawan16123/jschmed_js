@@ -192,6 +192,8 @@ var fc = function(name,age,height){
     this.age = age;
     this.height = height;
 }
-undefined
+fc.prototype.method = function(year){console.log("man you are old :"+year);}
+
+
 var joe = new fc("rogan",50, "5'7")
 
