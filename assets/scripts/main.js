@@ -197,3 +197,4 @@ fc.prototype.method = function(year){console.log("man you are old :"+year);}
 
 var joe = new fc("rogan",50, "5'7")
 
+joe(33)
