@@ -180,3 +180,18 @@ if (john.bmi>mark.bmi){
 }else{console.log(mark.name +" bmi is:"+mark.bmi);}
 
 console.log(mark,john);
+
+
+
+// Section 4: 
+
+// object and function prototype
+// function constructor
+var fc = function(name,age,height){
+    this.name=name;
+    this.age = age;
+    this.height = height;
+}
+undefined
+var joe = new fc("rogan",50, "5'7")
+
