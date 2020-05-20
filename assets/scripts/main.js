@@ -198,4 +198,8 @@ fc.prototype.method = function(year){console.log("man you are old :"+year);}
 
 var joe = new fc("rogan",50, "5'7")
 // joe.calage(55);
-joe.method(33)
+joe.method(33);
+
+
+joe.hasOwnProperty("age");
+joe instanceof fc;
