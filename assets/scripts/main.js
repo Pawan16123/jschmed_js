@@ -187,19 +187,40 @@ console.log(mark,john);
 
 // object and function prototype
 // function constructor
-var fc = function(name,age,height){
+var Fc = function(name,age,height){
     this.name=name;
     this.age = age;
     this.height = height;
     // this.calage = function(year){console.log("man you are old :"+year);}
 }
-fc.prototype.method = function(year){console.log("man you are old :"+year);}
+Fc.prototype.method = function(year){console.log("man you are old :"+year);}
 
 
-var joe = new fc("rogan",50, "5'7")
+var joe = new Fc("rogan",50, "5'7")
 // joe.calage(55);
 joe.method(33);
 
 
 joe.hasOwnProperty("age");
 joe instanceof fc;
+
+// ALl the property that you use in arrays and objects i.e push pull pop etc etc are all present in it's  prototype property 
+
+// Object .create
+var personProto = {
+    calculateAge: function(){
+        console.log(2020-this.yob);
+    }
+}; 
+ 
+var john = Object.create(personProto);
+john.name = "john";
+john.yob = 1997;
+john.job = "teacher";
+
+var jane =  Object.create(personProto,
+    {
+        name:{value:"jane"},
+        yob: {value:1985},
+        job: {value:"designer"}
+    });
