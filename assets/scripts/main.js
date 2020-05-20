@@ -191,10 +191,11 @@ var fc = function(name,age,height){
     this.name=name;
     this.age = age;
     this.height = height;
+    // this.calage = function(year){console.log("man you are old :"+year);}
 }
 fc.prototype.method = function(year){console.log("man you are old :"+year);}
 
 
 var joe = new fc("rogan",50, "5'7")
-
+// joe.calage(55);
 joe.method(33)
