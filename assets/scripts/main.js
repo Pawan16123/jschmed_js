@@ -224,3 +224,19 @@ var jane =  Object.create(personProto,
         yob: {value:1985},
         job: {value:"designer"}
     });
+// object.create benifits is that it allows to implement to create complex inheritance structure compared to function constructor, helps to directly specify which objects should be a prototpe
+
+
+// function constructor and Object.create is most common used to create objects 
+
+// Diff between primitive and obj
+var obj1 = {name: "apaj", age:33};
+var obj3= obj1;
+obj1.age = 333;
+console.log(obj1.age,obj3.age);
+
+var a = 23;
+var b=45;
+a = 33;
+
+console.log(a,b);
