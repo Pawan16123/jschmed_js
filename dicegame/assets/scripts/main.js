@@ -206,10 +206,5 @@ function reset(){
     pcTwo[0].textContent = currentScore[1];
     finalScore = [0, 0];
     save=0;
-    diceno[0].textContent = 0;
-    winnie[0].style.display = "none";
-    x.pause();
-    sound = true;
-
 
 }
