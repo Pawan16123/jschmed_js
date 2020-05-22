@@ -240,3 +240,16 @@ var b=45;
 a = 33;
 
 console.log(a,b);
+
+
+
+// first class functions
+var years = [1333,3323,3234,2322]
+
+function arraycal(arr,fn){
+    var arr =[];
+    for(var i=0; i<arr.length; i++){
+        arrRes.push(fn(arr[i]));
+    }
+    return arrRes;
+}
