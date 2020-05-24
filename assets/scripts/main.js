@@ -262,4 +262,12 @@ function adult(val){
     return val >=22;
 }
 var newarr = arrc(agearr,adult);
-
+function guards(val){
+    if(val===true){
+        console.log("you can enter "+val);
+    }
+    else {
+        console.log("sorry kid you can't "+val);
+    }
+}
+arrc(newarr,guards);
