@@ -257,4 +257,9 @@ function arrc(arr,fn){
 function calage(val){
     return 2020 - val;
 }
-arrc(years,calage);
+var agearr = arrc(years,calage);
+function adult(val){
+    return val >=22;
+}
+var newarr = arrc(agearr,adult);
+
