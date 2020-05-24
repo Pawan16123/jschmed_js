@@ -244,12 +244,17 @@ console.log(a,b);
 
 
 // first class functions
-var years = [1333,3323,3234,2322]
+// Passing function as argumment
+var years = [1922, 1996,1962,2018,1994];
 
-function arraycal(arr,fn){
-    var arr =[];
-    for(var i=0; i<arr.length; i++){
+function arrc(arr,fn){
+    var arrRes = [];
+      for(var i=0; i<arr.length; i++){
         arrRes.push(fn(arr[i]));
     }
     return arrRes;
 }
+function calage(val){
+    return 2020 - val;
+}
+arrc(years,calage);
