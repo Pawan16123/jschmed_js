@@ -271,3 +271,9 @@ function guards(val){
     }
 }
 arrc(newarr,guards);
+
+function bmi(height,weight){
+        // formula
+
+}
+arrc();
