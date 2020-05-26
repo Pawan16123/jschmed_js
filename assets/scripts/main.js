@@ -266,14 +266,23 @@ function guards(val){
     if(val===true){
         console.log("you can enter "+val);
     }
-    else {
+    else {  
         console.log("sorry kid you can't "+val);
     }
 }
-arrc(newarr,guards);
-
-function bmi(height,weight){
-        // formula
-
+function arrc(arr,ar,fn){
+    var arrRes = [];
+      for(var i=0; i<arr.length; i++){
+        arrRes.push(fn(arr[i],ar[i]));
+    }
+    return arrRes;
 }
-arrc();
+​
+var heights = [172,185,165,142];
+var weights = [45,70,80,95];
+​
+function bmi(height,weight){
+    var bmi = (weight/(height*height))*10000;       
+    return Math.floor(bmi);
+}
+var bbmi= arrc(heights,weights,bmi);
