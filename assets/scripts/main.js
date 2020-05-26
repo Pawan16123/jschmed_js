@@ -286,3 +286,28 @@ function bmi(height,weight){
     return Math.floor(bmi);
 }
 var bbmi= arrc(heights,weights,bmi);
+
+
+// Firstclass functions : Returning functions.
+function askme(job){
+    if(job == "plumber"){
+        return function(name){
+            console.log("How long have you been working "+ name);
+        }
+    
+    }else if(job == "teacher"){    
+
+            return function(name){
+               console.log("which class do you teach "+name);
+            }
+    }else{
+            return function(name){
+                    console.log("what are you hiding "+name);
+                    }
+
+            }
+    
+
+}
+var answer = askme("plumber");
+answer('amber');
