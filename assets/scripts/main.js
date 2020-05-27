@@ -311,3 +311,11 @@ function askme(job){
 }
 var answer = askme("plumber");
 answer('amber');
+
+
+// IIFE : Immediately Innvoked Function Expression.
+(function(e){
+    var val = Math.random()*10;
+    consol.log("the parameter is:"+e);
+    console.log(val>=5);
+})(5)
