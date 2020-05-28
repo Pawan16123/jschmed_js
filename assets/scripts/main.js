@@ -319,3 +319,35 @@ answer('amber');
     consol.log("the parameter is:"+e);
     console.log(val>=5);
 })(5)
+
+
+// closure
+function canijoin(para){
+    var a = "some string";
+return function(time){
+        var man = 3240 - time;
+        console.log((para - man)+a);
+    }
+
+}
+
+var saveme = canijoin(5990);
+
+saveme(9009);
+// simole task
+function job(profile){
+    var a = "are you a ";
+
+    return function(name){
+
+      console.log(name+ " " +a + profile + "?");
+      }
+
+}
+
+var teacher = job("teacher");
+teacher("Alice");
+var plumber = job("plumber");
+plumber("johnny")
+var nae = job("unknown person");
+nae("anonymous");
