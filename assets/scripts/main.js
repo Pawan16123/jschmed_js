@@ -351,3 +351,24 @@ var plumber = job("plumber");
 plumber("johnny")
 var nae = job("unknown person");
 nae("anonymous");
+
+
+// BInd , apply, call function methods that are available
+var obj = {
+    name:"jessy",
+    age:"45",
+    yob:"1983",
+    myfun: function(mkbh){
+               console.log(this.name+" i am "+this.age +" years old born in "+this.yob+" and then this parameter: "+mkbh);
+           }   
+       
+   }
+   var newobj={
+       name:"boren",
+       age:39,
+       yob:2000,
+   }
+   obj.myfun("ada");
+   obj.myfun.call(newobj,"it's defined");
+   var newcall = obj.myfun.bind(newobj,"what's new");
+   newcall();
