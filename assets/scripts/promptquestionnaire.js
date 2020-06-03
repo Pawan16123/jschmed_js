@@ -6,3 +6,4 @@ function cal(){
     }else{console.log("grow up kid");}
 }
 cal();
+// jsut for two day rule
