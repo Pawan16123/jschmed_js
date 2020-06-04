@@ -8,26 +8,27 @@ function cal(){
 cal();
 // jsut for two day rule
 
-
-function Questions(question,answers,option){
+function Question(question,answers,option){
     this.question =  question;
-    this.anwers = answers;
+    this.answers = answers;
     this.option = option;
     
 }
-Questions.prototype.displayques = function(){
+Question.prototype.displayques = function(){
     console.log(this.question);
 
-    for (var i=0; i<0; i< this.answers.length; i++){
+    for (var i=0; i< this.answers.length; i++){
           console.log(i + ":"+ this.answers[i]);
     }
 }
 
-var q1 = new Question("Is js the best programming language", ["hell yeah", "Meh"]), 0);
+var q1 = new Question("Is js the best programming language", ["hell yeah", "Meh"], 0);
 
 var q2 = new Question("Who's course is this",["Jonas","colt","max"],0);
 
 var q3 = new Question("Is coding",["boring","hard","fun","tedious"],2);
 
-var n = Math.floor(Math.random()*questions.length
+var questions = [q1,q2,q3];
+
+var n = Math.floor(Math.random()*questions.length);
 questions[n].displayques();
