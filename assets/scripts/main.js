@@ -376,6 +376,17 @@ var obj = {
 
 
 // section 5: COding challenge
+// edit later
+
+var oobj={
+    name:"boren",
+    age:39,
+    yob:2000,
+}
+oobj.myfun("ada");
+oobj.myfun.call(newobj,"it's defined");
+var newcall = oobj.myfun.bind(newobj,"what's new");
+newcall();
 
 
 
