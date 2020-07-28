@@ -388,5 +388,7 @@ function Ques(question,answers,correct){
 var q1 = new Ques('is js the coolest programming lang ', ['Yes','No'], 0);
 
 
+// refresher of section 5 and then continue with 6
+
 
 // Section 6.
