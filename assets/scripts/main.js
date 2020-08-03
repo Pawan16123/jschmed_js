@@ -390,6 +390,12 @@ var q1 = new Ques('is js the coolest programming lang ', ['Yes','No'], 0);
 
 // refresher of section 5 and then continue with 6
 
+// Everything is an object
+
+// Similar to class JS has Constructors that are used to create multiple object you jst have to define the purpose and then create any number of required instances
+
+// Inheritance take properties of other obj. JS is a prototype based language which make inheritance is made possbile using prototype
+
 
 // Section 6.
 
