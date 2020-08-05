@@ -394,7 +394,20 @@ var q1 = new Ques('is js the coolest programming lang ', ['Yes','No'], 0);
 
 // Similar to class JS has Constructors that are used to create multiple object you jst have to define the purpose and then create any number of required instances
 
-// Inheritance take properties of other obj. JS is a prototype based language which make inheritance is made possbile using prototype
+// Inheritance take properties of other obj. JS is a prototype based language which make inheritance is made possbile using prototype.NULL is the only one which doesn't have prototype property
+
+
+// 61. creating object using function constructor
+
+var People = function(surname, age, height) {
+    this.surname = surname;
+    this.age = age;
+    this.height=height;
+} 
+
+var bruce = new People("wayne", "thirtynine",5.9);
+
+People.prototype.calculateage = function(){console.log("no cal needed:"+ this.age);}
 
 
 // Section 6.
