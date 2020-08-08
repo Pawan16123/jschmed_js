@@ -408,7 +408,7 @@ var People = function(surname, age, height) {
 var bruce = new People("wayne", "thirtynine",5.9);
 
 People.prototype.calculateage = function(){console.log("no cal needed:"+ this.age);}
-
+People.prototype.key = "value";
 
 // Section 6.
 
