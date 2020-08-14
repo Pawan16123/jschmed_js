@@ -410,6 +410,9 @@ var bruce = new People("wayne", "thirtynine",5.9);
 People.prototype.calculateage = function(){console.log("no cal needed:"+ this.age);}
 People.prototype.key = "value";
 
+// 62THe protype chain in console.
+// Just understanding the link between all prototype , how it's stored and how it's used.
+
 // Section 
 
 // wip work load
