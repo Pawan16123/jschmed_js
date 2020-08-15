@@ -412,7 +412,7 @@ People.prototype.key = "value";
 
 // 62THe protype chain in console.
 // Just understanding the link between all prototype , how it's stored and how it's used.
-
+// pretty long jrny
 // Section 
 
 // wip work load
