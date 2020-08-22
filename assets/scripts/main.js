@@ -414,7 +414,7 @@ People.prototype.key = "value";
 // Just understanding the link between all prototype , how it's stored and how it's used.
 // pretty long jrny
 // Section 
-
+// timrpsdddrd ny   
 // wip work load
 // webpack
 
