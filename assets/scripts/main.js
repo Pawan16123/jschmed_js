@@ -419,3 +419,5 @@ People.prototype.key = "value";
 // webpack
 
 // workflow
+
+// Added the tags scnning method
